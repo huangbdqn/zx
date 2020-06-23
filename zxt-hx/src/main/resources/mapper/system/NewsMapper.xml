@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxt.system.mapper.NewsMapper">
+    
+    <resultMap type="News" id="NewsResult">
+        <result property="newsId"    column="news_id"    />
+        <result property="title"    column="title"    />
+        <result property="visits"    column="visits"    />
+        <result property="addTime"    column="add_time"    />
+        <result property="content"    column="content"    />
+        <result property="backupone"    column="backupone"    />
+        <result property="backuptwo"    column="backuptwo"    />
+        <result property="backupthree"    column="backupthree"    />
+    </resultMap>
+
+    <sql id="selectNewsVo">
+        select news_id, title, visits, add_time, content, backupone, backuptwo, backupthree from news
+    </sql>
+
+    <select id="selectNewsList" parameterType="News" resultMap="NewsResult">
+        <include refid="selectNewsVo"/>
+        <where>  
+            <if test="title != null  and title != ''"> and title like concat('%', #{title}, '%')</if>
+            <if test="visits != null  and visits != ''"> and visits = #{visits}</if>
+            <if test="addTime != null "> and add_time = #{addTime}</if>
+            <if test="content != null  and content != ''"> and content = #{content}</if>
+            <if test="backupone != null  and backupone != ''"> and backupone = #{backupone}</if>
+            <if test="backuptwo != null  and backuptwo != ''"> and backuptwo = #{backuptwo}</if>
+            <if test="backupthree != null  and backupthree != ''"> and backupthree = #{backupthree}</if>
+        </where>
+    </select>
+    
+    <select id="selectNewsById" parameterType="Long" resultMap="NewsResult">
+        <include refid="selectNewsVo"/>
+        where news_id = #{newsId}
+    </select>
+        
+    <insert id="insertNews" parameterType="News">
+        insert into news
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="newsId != null ">news_id,</if>
+            <if test="title != null  and title != ''">title,</if>
+            <if test="visits != null  and visits != ''">visits,</if>
+            <if test="addTime != null ">add_time,</if>
+            <if test="content != null  and content != ''">content,</if>
+            <if test="backupone != null  and backupone != ''">backupone,</if>
+            <if test="backuptwo != null  and backuptwo != ''">backuptwo,</if>
+            <if test="backupthree != null  and backupthree != ''">backupthree,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="newsId != null ">#{newsId},</if>
+            <if test="title != null  and title != ''">#{title},</if>
+            <if test="visits != null  and visits != ''">#{visits},</if>
+            <if test="addTime != null ">#{addTime},</if>
+            <if test="content != null  and content != ''">#{content},</if>
+            <if test="backupone != null  and backupone != ''">#{backupone},</if>
+            <if test="backuptwo != null  and backuptwo != ''">#{backuptwo},</if>
+            <if test="backupthree != null  and backupthree != ''">#{backupthree},</if>
+         </trim>
+    </insert>
+
+    <update id="updateNews" parameterType="News">
+        update news
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="title != null  and title != ''">title = #{title},</if>
+            <if test="visits != null  and visits != ''">visits = #{visits},</if>
+            <if test="addTime != null ">add_time = #{addTime},</if>
+            <if test="content != null  and content != ''">content = #{content},</if>
+            <if test="backupone != null  and backupone != ''">backupone = #{backupone},</if>
+            <if test="backuptwo != null  and backuptwo != ''">backuptwo = #{backuptwo},</if>
+            <if test="backupthree != null  and backupthree != ''">backupthree = #{backupthree},</if>
+        </trim>
+        where news_id = #{newsId}
+    </update>
+
+    <delete id="deleteNewsById" parameterType="Long">
+        delete from news where news_id = #{newsId}
+    </delete>
+
+    <delete id="deleteNewsByIds" parameterType="String">
+        delete from news where news_id in 
+        <foreach item="newsId" collection="array" open="(" separator="," close=")">
+            #{newsId}
+        </foreach>
+    </delete>
+    
+</mapper>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html  lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>武汉市卉工美园艺有限公司</title>
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+    <link th:href="@{/favicon.ico}" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/animate.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/zx.css}" rel="stylesheet"/>
+</head>
+<body>
+<!-- 头部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- 小屏幕导航按钮和logo -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+<!--            <a class="navbar-brand" href="#">英茂商务</a>-->
+            <img class="navbar-brand" alt="" th:src="@{/img/myimg/cpimg.png}" style="display: inline-block;"/>
+        </div>
+        <!-- 小屏幕导航按钮和logo -->
+        <!-- 导航 -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#bbs">绿植花卉</a></li>
+                <li><a href="#html5">租摆案例</a></li>
+                <li><a href="#course">养护技巧</a></li>
+                <li><a href="#course2">服务流程</a></li>
+                <li><a href="#app">关于我们</a></li>
+                <li><a href="#aboutus">联系我们</a></li>
+            </ul>
+        </div>
+        <!-- 导航 -->
+    </div>
+</nav>
+<!-- 头部导航栏 -->
+
+<!-- home -->
+<section id="home">
+    <div class="container-fluid">
+        <div class="carousel slide" id="carousel-620652" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-slide-to="0" data-target="#carousel-620652" class="active">
+                </li>
+                <li data-slide-to="1" data-target="#carousel-620652">
+                </li>
+                <li data-slide-to="2" data-target="#carousel-620652">
+                </li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img alt="" th:src="@{/img/myimg/1111.jpg}"/>
+                </div>
+                <div class="item">
+                    <img alt="" th:src="@{/img/myimg/1111.jpg}"/>
+                </div>
+                <div class="item">
+                    <img alt="" th:src="@{/img/myimg/1111.jpg}"/>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-620652" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+            <a class="right carousel-control" href="#carousel-620652" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+        </div>
+    </div>
+
+</section>
+<!-- home -->
+<!-- bbs -->
+<section id="bbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 wow bounceInLeft">
+                <a href="www.baidu.com">
+                    <img th:src="@{/img/myimg/333.png}" class="img-responsive">
+                    <h3>Android开发</h3>
+                    <p>Android开发技术交流、问题求助、实战案例分享</p>
+                </a>
+            </div>
+            <div class="col-md-4 wow bounceInDown">
+                <a href="www.baidu.com">
+                    <img th:src="@{/img/myimg/444.png}" class="img-responsive">
+                    <h3>IOS开发</h3>
+                    <p>IOS开发技术交流、海量IOS实战开发分享</p>
+                </a>
+            </div>
+            <div class="col-md-4 wow bounceInRight">
+                <a href="www.baidu.com">
+                    <img th:src="@{/img/myimg/555.png}" class="img-responsive">
+                    <h3>嵌入式底层开发</h3>
+                    <p>底层嵌入式交流、实战案例分享</p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- bbs -->
+<!-- html5 -->
+<section id="html5">
+    <div class="container">
+        <div class="col-md-6 wow fadeInLeft">
+            <h2>HTML5前端开发</h2>
+            <p>一线资深前端开发工程师倾情打造！助你完成普通程序员到优秀工程师的华丽升级！</p>
+            <p><span class="glyphicon glyphicon-grain inco"></span>使用HTML5与CSS3技术轻松实现设备自适应展示。</p>
+            <p><span class="glyphicon glyphicon-grain inco"></span>清晰明了的语义代码结构，更高的可读性、更利于页面维护。</p>
+        </div>
+        <div class="col-md-6 wow fadeInRight">
+            <img th:src="@{/img/myimg/66.png}" class="img-responsive">
+        </div>
+    </div>
+</section>
+<!-- html5 -->
+<!-- bootstrap -->
+<section id="bootstrap">
+    <div class="container">
+        <div class="col-md-6 wow fadeInUp">
+            <img th:src="@{/img/myimg/777.png}" class="img-responsive">
+        </div>
+        <div class="col-md-6 wow fadeInUp">
+            <h2>bootstrap实战视频教程</h2>
+            <p>bootstrap是最受欢迎的HTML\CSS和JS框架，用于开发响应式布局、移动设备优先的web项目。</p>
+            <p><span class="glyphicon glyphicon-grain inco"></span>你的网站和应用能再bootstrap的帮助下通过同一份代码快速、有效适配手机、平板、PC设备。</p>
+            <p><span class="glyphicon glyphicon-grain inco"></span>bootstrap提供了全面、完美的文档。你能再这里找到关于HTML元素、HTML和CSS组件、Jquery插件方面的所有详细文档。</p>
+        </div>
+    </div>
+</section>
+<!-- bootstrap -->
+<!-- course -->
+<section id="course">
+    <div class="container">
+        <div class="row wow fadeIn" data-wow-duration="4s">
+            <div class="col-md-12">
+                <h2>最新课程</h2>
+            </div>
+            <div class="col-md-3">
+                <div class="course">
+                    <img  th:src="@{/img/myimg/777.png}" class="img-responsive">
+                    <a href="www.baidu.com" target="_blank" class="btn btn-primary" role="button">加入学习</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="course">
+                    <img  th:src="@{/img/myimg/777.png}" class="img-responsive">
+                    <a href="www.baidu.com" target="_blank" class="btn btn-primary" role="button">加入学习</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="course">
+                    <img  th:src="@{/img/myimg/777.png}" class="img-responsive">
+                    <a href="www.baidu.com" target="_blank" class="btn btn-primary" role="button">加入学习</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="course">
+                    <img  th:src="@{/img/myimg/777.png}" class="img-responsive">
+                    <a href="www.baidu.com" target="_blank" class="btn btn-primary" role="button">加入学习</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="course">
+                    <img  th:src="@{/img/myimg/777.png}" class="img-responsive">
+                    <a href="www.baidu.com" target="_blank" class="btn btn-primary" role="button">加入学习</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="course">
+                    <img  th:src="@{/img/myimg/777.png}" class="img-responsive">
+                    <a href="www.baidu.com" target="_blank" class="btn btn-primary" role="button">加入学习</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="course">
+                    <img  th:src="@{/img/myimg/777.png}" class="img-responsive">
+                    <a href="www.baidu.com" target="_blank" class="btn btn-primary" role="button">加入学习</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="course">
+                    <img  th:src="@{/img/myimg/777.png}" class="img-responsive">
+                    <a href="www.baidu.com" target="_blank" class="btn btn-primary" role="button">加入学习</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- course -->
+
+<!-- app -->
+<section id="course2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 wow fadeInLeft">
+                <h2>英茂商务移动APP下载</h2>
+                <p>挨打的份，阿萨的饭卡手动阀开始打飞机阿斯蒂芬卡上空的飞机阿斯顿，上的飞机啊看手动阀手动阀，安德森开发进度，卡开始打飞机啊士大夫，卡圣诞节饭卡手动阀，阿斯蒂芬几位既然是打开富婆啊士大夫的。</p>
+                <button type="button" class="btn btn-primary">
+                    <span class="glyphicon glyphicon glyphicon-download-alt"></span>Iphone版
+                </button>
+                <button type="button" class="btn btn-primary">
+                    <span class="glyphicon glyphicon glyphicon-download-alt"></span>Android版
+                </button>
+            </div>
+            <div class="col-md-6 wow fadeInLeft">
+                <img  th:src="@{/img/myimg/66.png}" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- app -->
+<section id="app">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 wow fadeInLeft">
+                <h2>英茂商务移动APP下载</h2>
+                <p>挨打的份，阿萨的饭卡手动阀开始打飞机阿斯蒂芬卡上空的飞机阿斯顿，上的飞机啊看手动阀手动阀，安德森开发进度，卡开始打飞机啊士大夫，卡圣诞节饭卡手动阀，阿斯蒂芬几位既然是打开富婆啊士大夫的。</p>
+                <button type="button" class="btn btn-primary">
+                    <span class="glyphicon glyphicon glyphicon-download-alt"></span>Iphone版
+                </button>
+                <button type="button" class="btn btn-primary">
+                    <span class="glyphicon glyphicon glyphicon-download-alt"></span>Android版
+                </button>
+            </div>
+            <div class="col-md-6 wow fadeInLeft">
+                <img  th:src="@{/img/myimg/66.png}" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- app -->
+<!-- aboutus -->
+<section id="aboutus">
+    <div class="lvjing">
+        <div class="container">
+            <div class="col-md-6 wow" id="over">
+                <h2><span class="glyphicon glyphicon-send"></span>&nbsp;联系我们</h2>
+                <p>爱的积分卡的法律，啊大家覅哦鸡尾酒撒旦，爱神的箭覅哦按时间段风力发电反馈，爱神的箭覅哦啊是降低哦分，加速度计覅哦阿斯蒂芬，及撒旦发生看到房价。</p>
+                <address>
+                    <p><span class="glyphicon glyphicon-home"></span>&nbsp;地址：成都市中南路89号</p>
+                    <p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;联系电话：15829383928</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span>&nbsp;邮箱：273239793@qq.com</p>
+                </address>
+            </div>
+            <div class="col-md-6 wow fadeInUp">
+                <form action="" method="post">
+                    <div class="col-md-6">
+                        <input type="text" name="" value="" class="form-control" placeholder="姓名"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" name="" value="" class="form-control" placeholder="邮箱"/>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" name="" value="" class="form-control" placeholder="标题"/>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea type="text" name="" rows="4" class="form-control" placeholder="留言内容"/></textarea>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="submit" class="form-control" value="提交"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- aboutus -->
+<!-- footer -->
+<footer class="text-center">
+    版权所有@XXXX
+</footer>
+<!-- 鼠标移动到图片上图片放大效果 -->
+<div class=" abc"><img class="abcc"  th:src="@{/img/myimg/222.png}" /></div>
+
+
+<!-- 全局js -->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/wow.min.js}"></script>
+<script th:src="@{/js/jquery.singlePageNav.js}"></script>
+<!-- footer -->
+<!--<script src="https://cdn.staticfile.org/ionic/1.3.2/js/ionic.bundle.min.js"></script>
+好像没有用，菜鸟上看看，好像是做手机端用的
+-->
+<script>
+    $(function(){
+        // 导航跳转效果插件
+        $(".nav").singlePageNav({
+            offset:70//上部向下偏移70px  根据实际需要修改
+        });
+        // 小屏幕导航点击关闭菜单
+        $(".navbar-collapse a").click(function(){
+            $(".navbar-collapse").collapse("hide");
+        });
+        new WOW().init();
+        //鼠标移动到联系地址div上时晃动效果
+        $("#over").mouseenter(function(){
+            $(this).toggleClass("swing");
+        });
+    })
+</script>
+</body>
+</html>
